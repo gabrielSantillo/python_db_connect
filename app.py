@@ -3,7 +3,8 @@ import mariadb
 
 def ask_price():
     price = input("Cars above what price would you like to see?\n")
-    return price
+    price_converted_float = float(price)
+    return price_converted_float
 
 def filtering_cars_by_price(car_price):
     try:
