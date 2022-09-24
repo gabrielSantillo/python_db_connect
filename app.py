@@ -1,4 +1,3 @@
-from unittest import result
 import dbcreds
 import mariadb
 
@@ -27,7 +26,7 @@ def filtering_cars_by_price(car_price):
 
 conn = mariadb.connect(password=dbcreds.pasword, user=dbcreds.user, host=dbcreds.host, port=dbcreds.port, database=dbcreds.database)
 cursor = conn.cursor()
-cursor.execute('CALL get_all_items')
+cursor.execute('CALL get_all_items()')
 result = cursor.fetchall()
 cursor.close()
 conn.close()
